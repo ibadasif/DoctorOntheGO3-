@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name='Doctor On the GO 3'

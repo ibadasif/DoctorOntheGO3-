@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blackb"
+    tools:context=".Signup">
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="111dp"
+        android:layout_height="102dp"
+        android:layout_marginTop="16dp"
+        android:src="@mipmap/ic_diag_pat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="266dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="48dp"
+        android:drawableLeft="@drawable/ic_action_email"
+        android:fontFamily="@font/days_one"
+        android:hint="Email"
+        android:textColor="#A63345"
+        android:textColorHint="#A63345"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView12" />
+
+    <EditText
+        android:id="@+id/user2"
+        android:layout_width="266dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:drawableLeft="@drawable/ic_action_pro"
+        android:fontFamily="@font/days_one"
+        android:hint="Username"
+        android:textColor="#A63345"
+        android:textColorHint="#A63345"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email" />
+
+    <EditText
+        android:id="@+id/pass2"
+        android:layout_width="266dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="328dp"
+        android:drawableLeft="@drawable/ic_action_pass"
+        android:fontFamily="@font/days_one"
+        android:hint="Password"
+        android:textColor="#A63345"
+        android:textColorHint="#A63345"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user2"
+        app:layout_constraintVertical_bias="0.338" />
+
+    <EditText
+        android:id="@+id/pass3"
+        android:layout_width="266dp"
+        android:layout_marginTop="24dp"
+        android:layout_height="50dp"
+        android:drawableLeft="@drawable/ic_action_pass"
+        android:fontFamily="@font/days_one"
+        android:hint="Re-enter Password"
+        android:textColor="#A63345"
+        android:textColorHint="#A63345"
+        app:layout_constraintBottom_toTopOf="@+id/SP"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pass2"
+        app:layout_constraintVertical_bias="0.087" />
+
+    <Button
+        android:id="@+id/SP"
+        android:layout_width="252dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="164dp"
+        android:background="@drawable/round_button"
+        android:fontFamily="@font/days_one"
+        android:text="SIGN UP"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

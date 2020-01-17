@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">دروازے پر ڈاکٹر</string>
+    <string name="diagnose">تشخیص</string>
+    <string name="doctor">ڈاکٹر</string>
+    <string name="enter_here">یہاں داخل</string>
+    <string name="hospital">ہسپتال</string>
+    <string name="pedometer">پیڈومیٹر</string>
+    <string name="start_walking">چلنا شروع کریں</string>
+    <string name="state_your_problem">اپنا مسئلہ بیان کریں?</string>
+    <string name="steps">اقدامات</string>
+    <string name="sensor_not_found">سینسر نہیں ملا</string>
+    <string name="on_the_door">دروازے پر</string>
+</resources>
