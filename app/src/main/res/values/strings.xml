@@ -10,5 +10,24 @@
     <string name="start_walking">START WALKING</string>
     <string name="sensor_not_found">SENSOR NOT FOUND</string>
     <string name="on_the_door">ON THE DOOR</string>
+
     <string name="title_activity_hos_map">Map</string>
+
+    <string name="title_activity_aku">Map</string>
+
+    <string name="title_activity_dow">Map</string>
+
+    <string name="title_activity_heah">Map</string>
+
+    <string name="title_activity_camps">Map</string>
+
+    <string name="title_activity_taj">Map</string>
+
+    <string name="title_activity_kmc">Map</string>
+
+    <string name="title_activity_dsm">Map</string>
+
+    <string name="title_activity_ahc">Map</string>
+
+    <string name="title_activity_mah">Map</string>
 </resources>

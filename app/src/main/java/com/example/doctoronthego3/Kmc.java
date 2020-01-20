@@ -11,14 +11,14 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class HosMap extends FragmentActivity implements OnMapReadyCallback {
+public class Kmc extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_hos_map);
+        setContentView(R.layout.activity_kmc);
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
@@ -42,24 +42,11 @@ public class HosMap extends FragmentActivity implements OnMapReadyCallback {
         mMap.getUiSettings().setZoomControlsEnabled(true);
 
         // Add a marker in Sydney and move the camera
-        LatLng aku = new LatLng(24.8920, 67.0747);
-        mMap.addMarker(new MarkerOptions().position(aku).title("Aga Khan University Hospital"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(aku));
+        LatLng sydney = new LatLng(24.932285, 67.102311);
+        mMap.addMarker(new MarkerOptions().position(sydney).title("Karachi Medical Complex"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
         mMap.animateCamera(CameraUpdateFactory.zoomTo(11));
-        mMap.addMarker(new MarkerOptions().position(new LatLng(24.8916, 67.0681)).title("Liaquat National Hospital"));
-        mMap.addMarker(new MarkerOptions().position(new LatLng(24.9143, 67.1272)).title("Darul Sehat Hospital"));
-        mMap.addMarker(new MarkerOptions().position(new LatLng(24.9311, 67.0383)).title("Saifee Hospital"));
-        mMap.addMarker(new MarkerOptions().position(new LatLng(24.9201, 67.0297)).title("Abbasi Shaheed Hospital"));
-        mMap.addMarker(new MarkerOptions().position(new LatLng(24.8296, 67.0407)).title("Hashmanis Hospital"));
-        mMap.addMarker(new MarkerOptions().position(new LatLng(24.8520, 67.0442)).title("Jinnah Hospital Karachi"));
-        mMap.addMarker(new MarkerOptions().position(new LatLng(24.9247, 67.0455)).title("Dr. Ziauddin Hospital North Nazimabad Campus"));
-        mMap.addMarker(new MarkerOptions().position(new LatLng(24.9445, 67.1386)).title("Dow University Hospital"));
-        mMap.addMarker(new MarkerOptions().position(new LatLng(24.866786, 67.024249)).title("The Liver Center"));
-        mMap.addMarker(new MarkerOptions().position(new LatLng(24.870721, 67.032002)).title("Hijama Cente"));
-        mMap.addMarker(new MarkerOptions().position(new LatLng(24.868057, 67.030468)).title("Taj Medical Complex"));
-        mMap.addMarker(new MarkerOptions().position(new LatLng(24.918234, 67.062072)).title("Dr. Sumera Memon Dermatology & Laser CentreTaj Medical Complex"));
         mMap.addMarker(new MarkerOptions().position(new LatLng(24.836383, 67.071902)).title("Canada Medical Group Pakistan"));
-
 
     }
 }

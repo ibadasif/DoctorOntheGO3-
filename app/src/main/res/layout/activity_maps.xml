@@ -9,9 +9,9 @@
 
     <ImageView
         android:id="@+id/imageView9"
-        android:layout_width="479dp"
-        android:layout_height="268dp"
-        android:layout_marginBottom="24dp"
+        android:layout_width="545dp"
+        android:layout_height="317dp"
+        android:layout_marginBottom="108dp"
         android:src="@drawable/mapdoc"
         app:layout_constraintBottom_toTopOf="@+id/sdoc"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,7 +21,7 @@
         android:id="@+id/sdoc"
         android:layout_width="399dp"
         android:layout_height="70dp"
-        android:layout_marginTop="248dp"
+        android:layout_marginTop="400dp"
         android:background="@drawable/round_button"
         android:fontFamily="@font/days_one"
         android:text="SEARCH FOR YOUR SPECIFIC DOCTOR"
@@ -32,20 +32,18 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
+        android:id="@+id/shos"
         android:layout_width="399dp"
         android:layout_height="70dp"
-        android:layout_marginTop="60dp"
-        android:id="@+id/shos"
+        android:layout_marginTop="64dp"
         android:background="@drawable/round_button"
         android:fontFamily="@font/days_one"
         android:text="SEARCH FOR HOSPITALS NEAR BY YOU"
         android:textColor="@android:color/white"
         android:textSize="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.529"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sdoc" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

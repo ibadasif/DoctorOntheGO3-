@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="455dp"
-        android:layout_height="311dp"
+        android:layout_width="522dp"
+        android:layout_height="321dp"
         android:src="@drawable/redc"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
