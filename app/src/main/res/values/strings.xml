@@ -11,6 +11,8 @@
     <string name="sensor_not_found">SENSOR NOT FOUND</string>
     <string name="on_the_door">ON THE DOOR</string>
 
+    <string name="map_key" translatable="false">AIzaSyAc2KlLmbShXLF78revynHUz6ZpUvuy6GI</string>
+
     <string name="title_activity_hos_map">Map</string>
 
     <string name="title_activity_aku">Map</string>

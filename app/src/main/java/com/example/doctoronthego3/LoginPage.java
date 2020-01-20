@@ -46,8 +46,7 @@ public class LoginPage extends AppCompatActivity {
                         startActivity(go);
                     }
 
-                    else {
-                        Toast.makeText(getApplicationContext(), "error", Toast.LENGTH_SHORT).show();
+                    else { Toast.makeText(getApplicationContext(), "error", Toast.LENGTH_SHORT).show();
                     }
                 }
 

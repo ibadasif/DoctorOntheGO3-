@@ -13,6 +13,7 @@ public class Main2Activity extends AppCompatActivity {
     ImageView diagnose;
     ImageView pedometer;
     ImageView map;
+    ImageView amb;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +50,14 @@ public class Main2Activity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent c = new Intent(Main2Activity.this, Maps.class);
                 startActivity(c);
+            }
+        });
+        amb =findViewById(R.id.emergency);
+        amb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent d = new Intent(Main2Activity.this, Emergency.class);
+                startActivity(d);
             }
         });
 
