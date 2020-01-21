@@ -40,7 +40,6 @@
         android:hint="Username"
         android:textColor="#A63345"
         android:textColorHint="#A63345"
-        app:layout_constraintBottom_toTopOf="@+id/editText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"

@@ -1,7 +1,6 @@
 package com.example.doctoronthego3;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.FragmentActivity;
 
@@ -9,6 +8,8 @@ import android.Manifest;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
@@ -19,24 +20,53 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.Polyline;
+import com.google.android.gms.maps.model.PolylineOptions;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 
-public class Emergency extends FragmentActivity implements OnMapReadyCallback {
+public class Emergency extends FragmentActivity implements OnMapReadyCallback, TaskLoadedCallback  {
 
     Location currentLocation;
     FusedLocationProviderClient fusedLocationProviderClient;
     private static final  int REQUEST_CODE =101;
+    Button getDirection;
+    MarkerOptions place1,place2 ;
+    Polyline currentPolyLine;
+    GoogleMap googleMap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_emergency);
-
+        getDirection= findViewById(R.id.getDirection);
         fusedLocationProviderClient= LocationServices.getFusedLocationProviderClient(this);
         fetchLastLocation();
 
+        place1 = new MarkerOptions().position(new LatLng(24.9445, 67.1386)).title("Dow University Hospital");
+        place2 = new MarkerOptions().position(new LatLng(24.8338, 67.0287)).title("Hilal-E-Ahmar House Hospital");
 
+        getDirection.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url = getUrl(place1.getPosition(),place2.getPosition(),"driving");
+                new FetchURL(Emergency.this).execute(url,"driving");
+
+            }
+        });
+
+
+
+    }
+
+    private String getUrl(LatLng origin, LatLng dest, String directionMode){
+        String str_origin = "origin=" + origin.latitude+ "," + origin.longitude;
+        String str_dest = "destination=" + dest.latitude+ "," + dest.longitude;
+        String mode = "mode=" + directionMode;
+        String parameters = str_origin + "&" + str_dest + "&" + mode;
+        String output = "json";
+        String url = "https://maps.googleapis.com/maps/api/directions/" + output + "?" + parameters + "&key=" + getString(R.string.google_maps_key);
+        return url;
     }
 
     private void fetchLastLocation() {
@@ -71,6 +101,12 @@ public class Emergency extends FragmentActivity implements OnMapReadyCallback {
         googleMap.animateCamera(CameraUpdateFactory.newLatLng(latLng));
         googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng,5));
         googleMap.addMarker(markerOptions);
+        googleMap.getUiSettings().setZoomControlsEnabled(true);
+        googleMap.addMarker(place1);
+        googleMap.addMarker(place2);
+
+
+
 
     }
 
@@ -84,5 +120,12 @@ public class Emergency extends FragmentActivity implements OnMapReadyCallback {
                 }
                 break;
         }
+    }
+
+    @Override
+    public void onTaskDone(Object... values) {
+        if (currentPolyLine != null)
+            currentPolyLine.remove();
+        currentPolyLine = googleMap.addPolyline((PolylineOptions) values[0]);
     }
 }
